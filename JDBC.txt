@@ -1,0 +1,58 @@
+1)  load the driver:
+   (i)   Class.forName("com.mysql.jdbc.Driver");  // write down in try block 
+   (ii)  DriverManager.registerDriver(new com.mysql.jdbc.Driver()); 
+         DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+
+
+2)  Create a Connection: 
+
+	Connection con = DriverManager.getConnection("url","username","password");	
+		url --> "jdbc:mysql://localhost:3306/dbname      localhost = 127.0.0.1
+		username = "root"  password = ""
+
+
+3)  Create a Query, Statement, PreparedStatement, CallableStatement:
+
+	eg: 
+		String q = "select * from students";
+		Statement stmt = con.createStatement();
+
+		Statement have three type of method
+
+		ResultSet set = stmt.executeQuery(q);   // when program give the some data from database
+		stmt.executeUpdate();
+		stmt.execute
+
+
+		Create a PreparesStatement
+		String str = "insert into table1(tname) values(?)";
+		PreparedStatement psmt = con.prepareStatement(str);
+		psmt.setString(1, "kailash");
+		psmt.executeUpdate();
+
+
+		Create a callable statement
+
+		CallableStatement cs= con.prepareCall ("{call insertdetails(?,?,?)}");
+			cs.setInt(1, 1001);
+			cs.setString(2, "shreya");
+			cs.setInt(3, 90);
+			cs.execute();
+		
+
+4)  Process the data:
+
+	while(set.next()){                 // .next() method give the next row is null or not
+
+		int id = set.getInt(1) // also pass the column name "Id"
+		String name = set.getString(2)    // or ("name")
+	}
+
+
+5)  Close the connection 
+
+	 con.close();
+
+
+
+
