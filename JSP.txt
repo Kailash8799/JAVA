@@ -1,0 +1,38 @@
+JSP tags:
+
+1)  Scriptlet  tag
+
+	<%  %>   // in this tag you can write anything in java and if you want print any java verialble value then use out.println
+
+2)  Expression tag
+
+	<%=  %>   // ypu can write direct value 
+
+3)  Declaration tag
+
+	<%!  %>  declare method and variable
+
+4) 1. Directive tag (JSP Directive)Page
+
+	if you want to import any class in jsp file then write <%@page  import="" %>
+
+	Language
+	Extends
+	Import
+	contentType
+	info
+	session
+	isThreadSafe
+	autoflush
+	buffer
+	IsErrorPage
+	pageEncoding
+	errorPage
+	isELIgonored
+
+
+   2. Include directive  <%include file="" %>  // if you want add any other file
+
+   3. Taglib Directive
+
+	<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    //JSTL jar file add in library
