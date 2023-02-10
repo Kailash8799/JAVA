@@ -10,7 +10,7 @@
 		url --> "jdbc:mysql://localhost:3306/dbname      localhost = 127.0.0.1
 		username = "root"  password = ""
 
-
+ 
 3)  Create a Query, Statement, PreparedStatement, CallableStatement:
 
 	eg: 
