@@ -53,6 +53,4 @@
 
 	 con.close();
 
-
-
-
+6)  Add image in database
